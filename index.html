@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id = "form-container">
+    <form id = "feedback-form">
+        <h1>Feedback Form</h1>  
+        <p>Please fill out the form below to provide your feedback.</p>
+        <table>
+        <tr>
+            <td>
+                <label for="name">Name:</label>
+                <span class="tooltip" id="tooltip-name">Enter your  username</span>
+            </td>
+            <td>
+                <input type="text" name="name"  id="name" placeholder="Enter your name" >
+                <div id="char-count-name" class="char-count"></div>
+            
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email:</label>
+                <span class="tooltip" id="tooltip-email">Enter a valid email address</span>
+            </td>
+            <td>
+                <input type="email"  name="email"  id="email" placeholder="Enter your email" >
+                <div id="char-count-email" class="char-count"></div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <label for="comments">Comments:</label>
+                <span class="tooltip" id="tooltip-comments">Enter a comment</span>
+            </td>    
+            <td>
+                <textarea id="comments" name="comments" placeholder="Enter your comment" rows="4"></textarea>
+                <div id="char-count-message" class="char-count"></div>
+            </td>
+            
+
+        </tr>
+        <tr>
+            <td><button type="submit" id="submit">Submit</button></td>
+        </tr>
+        </table>
+    </form>
+    </div>
+
+    <div id="feedback-display">
+        <h2>Feedback Display</h2>
+
+        <p id="feedback-message">Your feedback will be displayed here after submission.</p>
+
+        
+    </div>
+
+    <script src="cp_1.js" ></script>
+    
+    
+</body>
+</html>
