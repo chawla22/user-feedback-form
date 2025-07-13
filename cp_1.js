@@ -21,39 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // maping input ids to charcounr id
     const  charcountMap = {
-
     name :"char-count-name",
     email : "char-count-email",
     comments :"char-count-message"
-
   }
-
-  
-    //initially hiding all the tooltips
-    Object.values(tooltipMap).forEach(id => 
-      {
-        document.getElementById(id).style.display = "none"
-      })
-
-
-
-     //event delegation for mouse over events 
-    form.addEventListener("mouseover",e => {
-      const tooltipId = tooltipMap[e.target.id]
-      if(tooltipId){
-        document.getElementById(tooltipId).style.display = "inline";
-      }
-    })
-
-    form.addEventListener("mouseout",e => {
-      const tooltipId = tooltipMap[e.target.id]
-      if(tooltipId){
-        document.getElementById(tooltipId).style.display = "none";
-      }
-    })
-      
-
-      
-
 
 })
