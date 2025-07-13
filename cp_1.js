@@ -53,4 +53,17 @@ document.addEventListener("DOMContentLoaded", function() {
     })
       
 
+      
+    // Counting characters as the user types (use input or keydown event)
+
+
+   form.addEventListener("input", (e) => {
+    const charcountId = charcountMap[e.target.id]
+    if(charcountId){
+     document.getElementById(charcountId).textContent = `Name chars: ${e.target.value.length}`
+    }
+
+  })
+  
+
     })
