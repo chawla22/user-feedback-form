@@ -96,7 +96,20 @@ document.addEventListener("DOMContentLoaded", function() {
       valid = false;
     }
 
+    if (valid) {
+      const entry = document.createElement("div");
+      entry.className = "feedback-message";
+      entry.innerHTML = `<strong> Name:    ${name}</strong>  <p>Email:    ${email}</p> <p>Comments:    ${comments}</p>`;
+      feedbackmessage.appendChild(entry);
 
+      // Reset form
+      form.reset();
+     Object.values(charcountMap).forEach(id => 
+      {
+        document.getElementById(id).style.display = "none"
+      })
+    }
+  });
 
   
 });
