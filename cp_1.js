@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", function() {
       valid = false;
     }
 
+
+    //adding the code to feedback message
     if (valid) {
       const entry = document.createElement("div");
       entry.className = "feedback-message";
@@ -112,5 +114,20 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
+ //prevent bubbling
+    // prevents the background container's click listener from being triggered when you click inside the form.
+
+    form.addEventListener("click",e=>{
+      e.stopPropagation(); // Stop the event from bubbling up to the container
+      console.log("form handling click...")
+    })
+
+    const container  = document.getElementById("form-container")
+    container.addEventListener("click", function () {
+    console.log("Background container clicked");
+    alert("Clicked outside the form");
+  });
+
+
 });
     
