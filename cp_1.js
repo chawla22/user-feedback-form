@@ -62,6 +62,42 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 
   
+// Prevent submission if fields are empty, showing validation messages
+// Form submission handler
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default submission
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const comments = commentsInput.value.trim();
+
+    let valid = true;
+
+    // Clear previous error styles
+    nameInput.style.border = "";
+    emailInput.style.border = "";
+    commentsInput.style.border = "";
+
+    if (!name) {
+      alert("Name is required.");
+      nameInput.style.border = "2px solid red";
+      valid = false;
+    }
+
+    if (!email) {
+      alert("Email is required.");
+      emailInput.style.border = "2px solid red";
+      valid = false;
+    }
+
+     if (!comments) {
+      alert("Comments is required.");
+      emailInput.style.border = "2px solid red";
+      valid = false;
+    }
+
+
+
   
 });
     
