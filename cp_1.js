@@ -36,6 +36,22 @@ document.addEventListener("DOMContentLoaded", function() {
       })
 
 
+
+    //event delegation to handle mouse events
+    form.addEventListener("mouseover",e => {
+      const tooltipId = tooltipMap[e.target.id]
+      if(tooltipId){
+        document.getElementById(tooltipId).style.display = "inline";
+      }
+    })
+
+    form.addEventListener("mouseout",e => {
+      const tooltipId = tooltipMap[e.target.id]
+      if(tooltipId){
+        document.getElementById(tooltipId).style.display = "none";
+      }
+    })
+
     
 
   
